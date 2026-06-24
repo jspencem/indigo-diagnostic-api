@@ -37,9 +37,9 @@ jobs:
 
       - name: Deploy application to EC2 via SSH
         env:
-        SSH_KEY: ${{secrets.VM_SSH_KEY}}
-        HOST: ${{secrets.VM_HOST}}
-        USER: ${{secrets.VM_USER}}
+          SSH_KEY: ${{secrets.VM_SSH_KEY}}
+          HOST: ${{secrets.VM_HOST}}
+          USER: ${{secrets.VM_USER}}
         run:
           echo "$SSH_KEY" > /tmp/deploy_key
           chmod 600 /tmp/deploy_key
