@@ -50,7 +50,7 @@ jobs:
           -e "ssh -i /tmp/deploy_key -o StrictHostKeyChecking=no" \
           ./ $USER@$HOST:/home/$USER/indigo-app/
       
-          ssh -i/tmp/deploy_key -o StrictHostKeyChecking=np $USER@$HOST \
+          ssh -i/tmp/deploy_key -o StrictHostKeyChecking=no $USER@$HOST \
             'cd /home/$USER/indigo-app && \
             pip install -r requirements.txt -q && \
             pkill -f app.py || true && \
